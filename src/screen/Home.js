@@ -9,9 +9,9 @@ import RestaurantItems, { localRestaurants } from '../components/home/Restaurant
 import SearchBar from '../components/home/SearchBar';
 
 
-const Home = () => {
+const Home = ({navigation}) => {
 
-  const [restaurantData, setRestaurantData] = useState(localRestaurants);
+  const [restaurantData, setRestaurantData] = useState([localRestaurants]);
   const [activeTab, setActiveTab] = useState('Delivery');
   const [city, setCity] = useState('New York');
 //   SanDiego
@@ -44,7 +44,7 @@ const Home = () => {
         backgroundColor={CustomColors.white}
         barStyle={'dark-content'}
       // translucent
-        // hidden={true}
+        hidden={true}
       />
 
       <View style={{ backgroundColor: CustomColors.white, padding: 15 }}>
@@ -54,7 +54,7 @@ const Home = () => {
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItems restaurantData={restaurantData} />
+        <RestaurantItems restaurantData={restaurantData} navigation={navigation} />
       </ScrollView>
 
       <Divider width={1} />
