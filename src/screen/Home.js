@@ -44,6 +44,7 @@ const Home = () => {
         backgroundColor={CustomColors.white}
         barStyle={'dark-content'}
       // translucent
+        // hidden={true}
       />
 
       <View style={{ backgroundColor: CustomColors.white, padding: 15 }}>
