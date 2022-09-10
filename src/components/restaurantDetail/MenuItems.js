@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import BouncyCheckbox from 'react-native-bouncy-checkbox'
 import { Divider } from 'react-native-elements'
 import { CustomColors } from '../../assets/CustomColors'
 
@@ -82,9 +83,16 @@ export default function MenuItems() {
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             {food.map((food, index) => (
-                <View key={index} style={styles.container}>
+                <View key={index}>
                     <View style={styles.menuItemsStyle}>
-                        <FoodInfo food={food} />
+                        <View style={styles.container}>
+                            <BouncyCheckbox
+                                iconStyle={{ borderColor: CustomColors.lightGray, borderRadius: 0, }}
+                                fillColor={CustomColors.green}
+                                innerIconStyle={{ borderRadius: 0, }}
+                            />
+                            <FoodInfo food={food} />
+                        </View>
                         <FoodImage food={food} />
                     </View>
                     <Divider size={0.5} orientation="vertical" style={{ marginHorizontal: 20 }} />
@@ -108,6 +116,9 @@ const FoodImage = props => (
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
+        flexDirection: 'row',
+        // borderColor: '#000', borderWidth: 1
     },
     menuItemsStyle: {
         flexDirection: 'row',

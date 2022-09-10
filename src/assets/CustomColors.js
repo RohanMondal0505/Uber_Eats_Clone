@@ -3,4 +3,6 @@ export const CustomColors = {
     black: '#000',
     gray: '#eee',
     darkGray: '#888888',
+    lightGray: 'lightgray',
+    green: 'green',
 }
