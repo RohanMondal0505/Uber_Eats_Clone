@@ -14,7 +14,7 @@ export default RestaurantDetail = ({ route, navigation }) => {
             />
             <About route={route} />
             <Divider size={1.8} color={CustomColors.black} style={{ marginVertical: 20, }} />
-            <MenuItems />
+            <MenuItems restaurantName={route.params.name} />
             <ViewCart navigation={navigation} restaurantName={route.params.name} />
         </View>
     )
