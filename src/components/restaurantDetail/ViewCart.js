@@ -58,7 +58,7 @@ export default function ViewCart({navigation, restaurantName}) {
                                     right: 20,
                                     top: 15,
                                     fontSize: 18,
-                                    color:CustomColors.white,
+                                    color: CustomColors.white,
                                 }}>
                                 $ {totalUSD}
                             </Text>
